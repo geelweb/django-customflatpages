@@ -9,6 +9,22 @@ emplacement management.
     git clone https://github.com/geelweb/django-customflatpages.git
     pip install django-customflatpages
 
+syncdb
+
+    python manage.py syncdb
+
+or using south
+
+    python manage.py migrate customflatpages
+
+## Migrate
+
+### from 0.1 to 0.2
+
+Using south
+
+    python manage.py migrate customflatpages
+
 ## Usage
 
 In `settings.py` update the `INSTALLED_APPS
