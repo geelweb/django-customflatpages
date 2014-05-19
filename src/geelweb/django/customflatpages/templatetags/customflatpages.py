@@ -44,6 +44,9 @@ class CustomFlatpageNode(template.Node):
         if self.emplacement:
             flatpages = flatpages.filter(emplacement=self.emplacement.resolve(context))
 
+        # sort by order field
+        flatpages = flatpages.order_by('order')
+
         context[self.context_name] = flatpages
         return ''
 

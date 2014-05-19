@@ -7,6 +7,7 @@ class CustomFlatPage(FlatPage):
     emplacement = models.CharField(max_length=12,
             choices=settings.FLATPAGES_EMPLACEMENTS,
             default=settings.FLATPAGES_DEFAULT_EMPLACEMENT)
+    order = models.IntegerField(default=0)
 
     def save(self):
         super(CustomFlatPage, self).save()

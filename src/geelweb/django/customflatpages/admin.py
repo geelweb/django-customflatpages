@@ -12,11 +12,11 @@ class CustomFlatPageForm(FlatpageForm):
 class CustomFlatPageAdmin(FlatPageAdmin):
     form = CustomFlatPageForm
     fieldsets = (
-        (None, {'fields': ('url', 'title', 'content', 'emplacement')}),
+        (None, {'fields': ('url', 'title', 'content', 'emplacement', 'order')}),
     )
     formfield_overrides = { models.TextField: {'widget': forms.Textarea(attrs={'class':'ckeditor'})}, }
 
-    list_display = ('url', 'title', 'emplacement', )
+    list_display = ('url', 'title', 'emplacement', 'order', )
     list_filter = ('emplacement', )
 
     class Media:
