@@ -16,6 +16,8 @@ From source
 
 ## Configuring your Django installation
 
+First you have to install the [Django flatpages app](https://docs.djangoproject.com/en/1.6/ref/contrib/flatpages/#installation)
+
 Edit `settings.py` and add `'geelweb.django.customflatpages'` to the `INSTALLED_APPS`
 
 Create the database tables using `python manage.py syncdb` or `python manage.py migrate customflatpages` if your application use [south](http://south.aeracode.org/)
