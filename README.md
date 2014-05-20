@@ -6,38 +6,26 @@ emplacement management.
 
 ## Install
 
-    git clone https://github.com/geelweb/django-customflatpages.git
-    pip install django-customflatpages
+Using pip
 
-syncdb
+    pip install https://github.com/geelweb/django-customflatpages/archive/0.2.zip
 
-    python manage.py syncdb
+From source
 
-or using south
+    python setup.py install
 
-    python manage.py migrate customflatpages
+## Configuring your Django installation
 
-## Migrate
+Edit `settings.py` and add `'geelweb.django.customflatpages'` to the `INSTALLED_APPS`
 
-### from 0.1 to 0.2
+Create the database tables using `python manage.py syncdb` or `python manage.py migrate customflatpages` if your application use [south](http://south.aeracode.org/)
 
-Using south
+If your application use [south](http://south.aeracode.org/), and you try to upgrade from django-customflatpages 0.1 to 0.2, you have to execute `python manage.py migrate customflatpages 0001 --fake` before the migrate command.
 
-    python manage.py migrate customflatpages
+## Configuring django-customflatpages
 
-## Usage
-
-In `settings.py` update the `INSTALLED_APPS
-
-    INSTALLED_APPS = (
-        ...
-        'django.contrib.sites',
-        'django.contrib.flatpages',
-        'geelweb.fjango.customflatpages',
-        ...
-    )
-
-Define the `FLATPAGES_EMPLACEMENTS` and `FLATPAGES_DEFAULT_EMPLACEMENT`
+Define the `FLATPAGES_EMPLACEMENTS` and `FLATPAGES_DEFAULT_EMPLACEMENT` in
+settings
 
     FLATPAGES_EMPLACEMENTS = (
         ('footer', 'Flatpage with link in footer'),
@@ -58,3 +46,4 @@ And use the `get_customflatpages` tag
     {% for page in flatpages_menu %}
       <li><a href="{{ page.url }}">{{ page.title }}</a></li>
     {% endfor %}
+
