@@ -9,7 +9,7 @@ django customflatpages setup script
 """
 
 __author__ = "Guillaume Luchet <guillaume@geelweb.org>"
-__version__ = "0.2"
+__version__ = "0.3"
 
 import os, sys
 from setuptools import setup, find_packages
