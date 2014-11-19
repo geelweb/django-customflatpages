@@ -20,7 +20,7 @@ class CustomFlatPageAdmin(FlatPageAdmin):
     list_filter = ('emplacement', )
 
     class Media:
-        js = ('/static/ckeditor/ckeditor.js',)
+        js = ('ckeditor/ckeditor.js',)
 
 admin.site.unregister(FlatPage)
 admin.site.register(CustomFlatPage, CustomFlatPageAdmin)
