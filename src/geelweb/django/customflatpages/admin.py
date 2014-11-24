@@ -3,11 +3,13 @@ from django import forms
 from django.contrib.flatpages.admin import FlatpageForm, FlatPageAdmin
 from django.contrib.flatpages.models import FlatPage
 from django.db import models
+
 from geelweb.django.customflatpages.models import CustomFlatPage
 
 class CustomFlatPageForm(FlatpageForm):
     class Meta:
         model = CustomFlatPage
+        exclude = []
 
 class CustomFlatPageAdmin(FlatPageAdmin):
     form = CustomFlatPageForm
