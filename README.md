@@ -71,3 +71,8 @@ For example:
         {% endfor %}
     </ul>
 
+## Testing
+
+Run unit-tests
+
+    python tests/runtests.py
