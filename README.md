@@ -1,5 +1,7 @@
 # django-customflatpages
 
+![Build status](https://travis-ci.org/geelweb/django-customflatpages.svg?branch=master)
+
 django-customflatpages extends the [Django flatpages app](https://docs.djangoproject.com/en/dev/ref/contrib/flatpages/) to add an
 emplacement management.
 
