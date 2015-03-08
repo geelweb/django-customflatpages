@@ -9,7 +9,6 @@ class CustomFlatPage(FlatPage):
             default=settings.FLATPAGES_DEFAULT_EMPLACEMENT)
     order = models.IntegerField(default=0)
 
-    def save(self):
-        super(CustomFlatPage, self).save()
-        self.sites = [Site.objects.get(pk=settings.SITE_ID)]
-        super(CustomFlatPage, self).save()
+    def save(self, *args, **kwargs):
+        super(CustomFlatPage, self).save(*args, **kwargs)
+        self.sites.add(Site.objects.get(pk=settings.SITE_ID))
