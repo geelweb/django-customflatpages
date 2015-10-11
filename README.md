@@ -17,13 +17,11 @@ From source
 
 ## Configuring your Django installation
 
-First you have to install the [Django flatpages app](https://docs.djangoproject.com/en/1.6/ref/contrib/flatpages/#installation).
+First you have to install the [Django flatpages app](https://docs.djangoproject.com/en/1.8/ref/contrib/flatpages/#installation).
 
 Edit `settings.py` and add `'geelweb.django.customflatpages'` to the `INSTALLED_APPS`
 
-Create the database tables using `python manage.py syncdb` or `python manage.py migrate customflatpages` if your application use [south](http://south.aeracode.org/)
-
-If your application use [south](http://south.aeracode.org/), and you try to upgrade from django-customflatpages 0.1 to 0.2, you have to execute `python manage.py migrate customflatpages 0001 --fake` before the migrate command.
+Create the database tables using `python manage.py migrate`.
 
 ## Settings
 
