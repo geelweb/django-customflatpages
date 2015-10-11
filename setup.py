@@ -9,7 +9,7 @@ django customflatpages setup script
 """
 
 __author__ = "Guillaume Luchet <guillaume@geelweb.org>"
-__version__ = "0.3.2"
+__version__ = "0.3.3"
 
 import os, sys
 from setuptools import setup, find_packages
@@ -30,7 +30,7 @@ if __name__ == "__main__":
         maintainer=maintainer,
         maintainer_email=maintainer_email,
         url="https://github.com/geelweb/django-customflatpages",
-        download_url="https://github.com/geelweb/django-customflatpages/tarball/0.3.2",
+        download_url="https://github.com/geelweb/django-customflatpages/tarball/0.3.3",
         license='MIT',
         namespace_packages = ['geelweb', 'geelweb.django'],
         packages=find_packages('src'),

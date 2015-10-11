@@ -9,7 +9,7 @@ emplacement management.
 
 Using pip
 
-    pip install https://github.com/geelweb/django-customflatpages/archive/0.3.2.zip
+    pip install https://github.com/geelweb/django-customflatpages/archive/0.3.3.zip
 
 From source
 
