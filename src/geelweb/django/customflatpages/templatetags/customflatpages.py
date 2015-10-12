@@ -1,6 +1,6 @@
 from django import template
 from django.conf import settings
-from django.contrib.sites.models import get_current_site
+from django.contrib.sites.shortcuts import get_current_site
 from geelweb.django.customflatpages.models import CustomFlatPage
 
 register = template.Library()
