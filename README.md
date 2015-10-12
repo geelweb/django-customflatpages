@@ -5,6 +5,11 @@
 django-customflatpages extends the [Django flatpages app](https://docs.djangoproject.com/en/dev/ref/contrib/flatpages/) to add an
 emplacement management.
 
+## Requirements
+
+ - Django 1.7 to 1.8
+ - Pyhton 2.7 to 3.4
+
 ## Install
 
 Using pip
